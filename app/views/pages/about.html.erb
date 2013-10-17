@@ -3,11 +3,16 @@
 <script src="/assets/jquery.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Prosto+One' rel='stylesheet' type='text/css'>
 <style>
+h2 {
+	padding: 2500px 0 0 0;
+}
 body {
 	background: url("http://wallpis.com/wp-content/uploads/2013/07/Earth-Wallpapers-HD-.jpg");
 	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: left top;
+	background-size: 3000px 3000px;
+	background-position: left bottom;
+	-webkit-transition: background-position 90s;
+	margin: 0;
 }
 h1 {
 	color: rgba(255, 255, 255, .8);
@@ -32,6 +37,9 @@ input[type="submit"] {
 p {
 	text-align: center;
 }
+.show-description {
+	background-position: right top;
+}
 </style>
 </head>
 <body>
@@ -40,9 +48,14 @@ p {
 <input type="email" placeholder="Your email" size="80">
 <input type="submit">
 </p>
+<h2>
+</h2>
 <script>
 $("h1").on("click", function () {
 	alert("yes!");
 });
+$("body").on("mouseover", function () {
+	$(this).toggleClass('show-description');
+}); 
 </script>
 </body>
