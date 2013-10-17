@@ -15,11 +15,31 @@ h1 {
 	font-size: 80px;
 	font-family: 'Prosto One', cursive;
 }
+input {
+	border: 0;
+	padding: 8px;
+	font-size: 18px;
+	background: rgba(255, 255, 255, .25);
+	color: rgba(20, 25, 150, .7);
+	border-radius: 50px;
+
+}
+input[type="submit"] {
+      background: rgba(255, 255, 255, .6);
+      color: rgba(0, 0, 0, .9);
+      border-radius: 50px;
+}
+p {
+	text-align: center;
+}
 </style>
 </head>
 <body>
 <h1>ABOUT</h1>
-
+<p>
+<input type="email" placeholder="Your email" size="80">
+<input type="submit">
+</p>
 <script>
 $("h1").on("click", function () {
 	alert("yes!");
