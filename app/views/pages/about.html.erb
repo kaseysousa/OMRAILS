@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
 <script src="/assets/jquery.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Prosto+One' rel='stylesheet' type='text/css'>
@@ -7,13 +8,14 @@ h2 {
 	padding: 2500px 0 0 0;
 }
 body {
-	background: url("http://wallpis.com/wp-content/uploads/2013/07/Earth-Wallpapers-HD-.jpg");
+	background-color: rgba(255, 255, 255, .7);
 	background-repeat: no-repeat;
-	background-size: 3000px 3000px;
-	background-position: left bottom;
+	background-size: cover;
+	background-position: top left;
 	-webkit-transition: background-position 90s;
 	margin: 0;
 }
+
 h1 {
 	color: rgba(255, 255, 255, .8);
 	margin: 0;
@@ -30,32 +32,73 @@ input {
 
 }
 input[type="submit"] {
-      background: rgba(255, 255, 255, .6);
+      background: rgba(0, 30, 250, .6);
       color: rgba(0, 0, 0, .9);
       border-radius: 50px;
 }
 p {
 	text-align: center;
 }
+
 .show-description {
-	background-position: right top;
+	background-position: top right;
+	margin: 0;
+}
+.jumbotron {
+	background: rgba(0, 30, 250, .25);
+	padding: 80px;
+	margin: 80px;
 }
 </style>
 </head>
 <body>
-<h1>ABOUT</h1>
-<p>
-<input type="email" placeholder="Your email" size="80">
-<input type="submit">
-</p>
-<h2>
-</h2>
+<nav class="navbar navbar-inverse" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">SEMMELWEIS</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Dashboard</a></li>
+      
+      </li>
+    </ul>
+    <form class="navbar-form navbar-left" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Provider Name">
+      </div>
+      <button type="submit" class="btn btn-default">Search</button>
+    </form>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">Sign Out</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Account Details</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Billing</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+
+
+</body>
 <script>
 $("h1").on("click", function () {
 	alert("yes!");
 });
-$("body").on("mouseover", function () {
+/* $("body,h1,jumbotron").on("mouseover", function () {
 	$(this).toggleClass('show-description');
-}); 
+});
+*/ 
 </script>
-</body>
