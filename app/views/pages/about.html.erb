@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html>
 <head>
 <script src="/assets/jquery.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Prosto+One' rel='stylesheet' type='text/css'>
@@ -32,7 +32,7 @@ input {
 
 }
 input[type="submit"] {
-      background: rgba(0, 30, 250, .6);
+      background: rgba(52, 152, 219,.8);
       color: rgba(0, 0, 0, .9);
       border-radius: 50px;
 }
@@ -78,7 +78,9 @@ p {
       <button type="submit" class="btn btn-default">Search</button>
     </form>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Sign Out</a></li>
+      <% if user_signed_in? %>
+      <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+      <% end %>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
         <ul class="dropdown-menu">
@@ -97,8 +99,5 @@ p {
 $("h1").on("click", function () {
 	alert("yes!");
 });
-/* $("body,h1,jumbotron").on("mouseover", function () {
-	$(this).toggleClass('show-description');
-});
-*/ 
 </script>
+</html>
