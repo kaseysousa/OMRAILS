@@ -40,6 +40,12 @@ p {
 	text-align: center;
 }
 
+.table-bordered {
+  border: 50px;
+}
+.condensed {
+
+}
 .show-description {
 	background-position: top right;
 	margin: 0;
@@ -93,8 +99,31 @@ p {
   </div><!-- /.navbar-collapse -->
 </nav>
 
-  <h1>This is the h1</h1>
-
+<div class-"table1">
+<table class="table table-bordered condensed">
+  <tr class="active">
+    <th>Department</th>
+    <th>Provider</th>
+    <th>Comp. Rate</th>
+  </tr>
+  <tr>
+    <td>ED</td>
+    <td>Dr. H. Williams</td>
+    <td class="danger">37.4%</td>
+  </tr>
+  <tr>
+    <td>ICU</td>
+    <td>Derek Anderson</td>
+    <td class="success">61.2%</td>
+  </tr>
+  <tr>
+    <td>ED</td>
+    <td>Dr. Karen Chambers</td>
+    <td class="success">76.2%</td>
+  </tr>
+  <tr class="danger">ten</tr>
+</table>
+</div>
 </body>
 <script>
 $("h1").on("click", function () {
