@@ -1,6 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load('visualization', '1', {packages: ['corechart']});
+    </script>
+    <script type="text/javascript">
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+          ['Date', 'ED', 'ICU', 'Internal 1', 'NAD'],
+          ['11/1',  46.8,      51.3,         46.6,             44.6],
+          ['11/2',  46.7,      52.6,         47.6,             45.6],
+          ['11/3',  47.4,      53.3,         47.7,             46.0],
+          ['11/4',  47.9,      50.6,         50.7,             47.6],
+          ['11/5',  52.4,      52.3,         49.7,             47.8],
+          ['11/7',  52.0,      51.1,         51.6,             49.6],
+          ['11/8',  51.1,      51.1,         51.2,             50.6],
+          ['11/9',  52.5,      51.1,         51.6,             50.9],
+          ['11/10',  52.5,      51.9,         51.6,            52.6],
+          ['11/11',  53.3,      52.2,         51.6,             53.6],
+          ['11/12',  53.2,      52.2,         54.6,             54.6],
+          ['11/13',  52.6,      52.1,         55.6,             55.6],
+          ['11/14',  52.6,      52.8,         58.6,             57.6],
+          ['11/15',  53.6,      53.5,         59.6,             58.6],
+        ]);
+
+        var options = {
+          colors: ['#3498db'],
+          title : 'Compliance Rates: %',
+          titleTextStyle: {color: '#3498db'},
+          hAxis: {title: "Month"},
+          seriesType: "bars",
+          series: {3: {type: "line"}}
+        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+      google.setOnLoadCallback(drawVisualization);
+    </script>
 <script src="/assets/jquery.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Prosto+One' rel='stylesheet' type='text/css'>
 <style>
@@ -39,12 +79,19 @@ input[type="submit"] {
 p {
 	text-align: center;
 }
+th, td {
+    border: 1px solid black;
+    overflow: hidden;
+    width: 100px;
+}
+.table1 {
+  padding: 20px 390px 0 0;
+}
 
 .table-bordered {
   border: 50px;
 }
 .condensed {
-
 }
 .show-description {
 	background-position: top right;
@@ -54,6 +101,12 @@ p {
 	background: rgba(0, 30, 250, .25);
 	padding: 80px;
 	margin: 80px;
+}
+#chart_div {
+  margin-left: 0;
+  padding-left: 0;
+  position:relative;
+  left:-150px;
 }
 </style>
 </head>
@@ -98,9 +151,9 @@ p {
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
-
-<div class-"table1">
-<table class="table table-bordered condensed">
+<div id="chart_div" style="margin-left: 0px; width: 1100px; height: 400px;"></div>
+<div class="table1">
+<table class="table table-bordered">
   <tr class="active">
     <th>Department</th>
     <th>Provider</th>
@@ -121,7 +174,6 @@ p {
     <td>Dr. Karen Chambers</td>
     <td class="success">76.2%</td>
   </tr>
-  <tr class="danger">ten</tr>
 </table>
 </div>
 </body>
