@@ -28,7 +28,7 @@
         ]);
 
         var options = {
-          colors: ['#3498db'],
+          colors: ["#DCDDD8", '#74A6BD', "#475F77", '#3498db'],
           title : 'Compliance Rates: %',
           titleTextStyle: {color: '#3498db'},
           vAxis: {
@@ -43,7 +43,6 @@
           baselineColor: "#3498db",
           gridlinesColor: "grey",
           gridlinesCount: "-1",
-          title: "Previous 14 days",
         },
           seriesType: "bars",
           series: {3: {type: "line"}},
@@ -124,11 +123,12 @@ th, td {
 	padding: 80px;
 	margin: 80px;
 }
+
 #chart_div {
   margin-left: 0;
   padding-left: 0;
   position:relative;
-  left:-100px;
+  left:0px;
 }
 </style>
 </head>
@@ -173,8 +173,9 @@ th, td {
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
-<div id="chart_div" style="margin-left: 0px; width: 800px; height: 300px;"></div>
-<div class="table1">
+<div id="chart_div" style="margin-left: 0px; width: 750px; height: 300px;"></div>
+<img src="layout.png" height="300" width="300" align="right" style="padding: 0; top: -100px;"/>
+<div style="height:500px;overflow:auto;">
 <table class="table table-bordered">
   <tr class="active">
     <th>Department</th>
@@ -189,37 +190,37 @@ th, td {
   <tr>
     <td>ICU</td>
     <td>Derek Anderson</td>
-    <td class="success">61.2%</td>
+    <td class="danger">38.2%</td>
   </tr>
   <tr>
     <td>ED</td>
-    <td>Dr. Karen Chambers</td>
-    <td class="success">76.2%</td>
+    <td>John Nemours, RN</td>
+    <td class="danger">41.2%</td>
   </tr>
     <tr>
     <td>ED</td>
-    <td>Dr. Karen Chambers</td>
-    <td class="success">76.2%</td>
+    <td>Dr. Jacob Meyers</td>
+    <td class="warning">46.3%</td>
   </tr>
     <tr>
     <td>ED</td>
-    <td>Dr. Karen Chambers</td>
-    <td class="success">76.2%</td>
+    <td>Dr. Mark Halperin</td>
+    <td class="warning">51.2%</td>
   </tr>
     <tr>
     <td>ED</td>
-    <td>Dr. Karen Chambers</td>
-    <td class="success">76.2%</td>
+    <td>Jason Shipley, PA</td>
+    <td class="warning">51.6%</td>
   </tr>
     <tr>
     <td>ED</td>
-    <td>Dr. Karen Chambers</td>
-    <td class="success">76.2%</td>
+    <td>Karen Anderson, PA</td>
+    <td class="warning">53.0%</td>
   </tr>
     <tr>
     <td>ED</td>
-    <td>Dr. Karen Chambers</td>
-    <td class="success">76.2%</td>
+    <td>Dr. Paul Oplejan</td>
+    <td class="warning">54.7%</td>
   </tr>
     <tr>
     <td>ED</td>
